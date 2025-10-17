@@ -41,7 +41,11 @@ for feat in feature_list:
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
+<<<<<<< HEAD
 @app.route("/login", methods=["GET"])
+=======
+@app.route("/dashboard", methods=["GET"])
+>>>>>>> feature-dashboard
 def index():
     return render_template("index.html", feature_meta=feature_meta)
 
