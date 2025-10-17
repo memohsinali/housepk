@@ -4,6 +4,9 @@ import joblib
 import numpy as np
 from flask import Flask, render_template, request, redirect, url_for
 
+# === TEAM CONFLICT MARKER ===
+
+
 APP_ROOT = os.path.dirname(__file__)
 MODEL_DIR = os.path.join(APP_ROOT, "models")
 
@@ -29,9 +32,9 @@ for feat in feature_list:
     else:
         # numeric -> number input
         feature_meta.append({
-            "name": feat,
-            "field": field_name,
-            "type": "numeric",
+            "named": feat,
+            "fielded": field_name,
+            "typed": "numeric",
             "options": None
         })
 
